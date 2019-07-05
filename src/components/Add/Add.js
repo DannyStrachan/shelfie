@@ -8,17 +8,22 @@ import './Add.css';
 
 class Add extends Component {
 
-    constructor(props){
-        super(props);
+    constructor(props, context){
+        super(props, context);
         this.state = {
-            image: '',
-            productName: '',
-            price: ''
+            image: 'url',
+            productName: 'product',
+            price: 0
         };
+        
     }
     
-    handleClick( event ) {
-        this.setState({image: '', productName: '', price: ''})
+    handleClear() {
+        this.setState({
+            image: '', productName: '', price: 0
+        })
+       
+        alert('clearing form');        
     }
 
     render() {
@@ -35,7 +40,7 @@ class Add extends Component {
                 </div>
                 <div className="Button-div">
                     <div className="Button-section">
-                        <button onClick = { this.handleClick()}>Cancel</button>
+                        <button onClick = { () => this.handleClear()}>Cancel</button>
                         <button>Add to Inventory</button>
                     </div>
                 </div>
