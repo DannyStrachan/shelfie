@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: rgb(24, 24, 24);
+  height: 100%;
 }
 
 .App-logo {
@@ -17,6 +19,28 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Container-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: green; */
+  height: 100vh;
+  margin-top: 54px;
+}
+
+.Products {
+  background-color: purple;
+  width: 40%;
+  height: 100%;
+}
+
+.Add {
+  background-color: orange;
+  width: 30%;
+  height: 100%;
 }
 
 .App-link {
